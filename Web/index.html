@@ -1,0 +1,122 @@
+<!DOCTYPE html><!-- doctype do HTML5 -->
+<html>
+	<head>
+		<title>Meu portifólio</title>
+		
+		<!-- Importante para habilitar os recursos de Responsividade em conjunto com o CSS -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+  		        
+  		<link rel="stylesheet" href="css/bootstrap.css">
+      <link rel="stylesheet" type="text/css" href="css/estilo.css">
+      
+	</head>
+	
+<body>
+
+		
+    <!-- Início da barra de navegação -->
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+            
+            <!-- botao utilizado para abrir menu em dispositivos resolucao menor -->
+          	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            	<span class="icon-bar"></span>
+            	<span class="icon-bar"></span>
+            	<span class="icon-bar"></span>
+          	</button>
+            
+            <!-- logo do site -->
+            <a class="navbar-brand" href="#">Meu Portifólio</a>
+			
+			<!-- inicio menu -->
+            <div class="navbar-collapse collapse navbar-right">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">HOME</a></li>
+                <li><a href="contato.html">CONTATO</a></li>
+                <li><a href="sobre.html">SOBRE MIM</a></li>
+              </ul>
+            </div>
+            <!-- fim menu -->
+            
+		</div>
+	</div>
+	<!-- Fim da barra de navegação -->
+	
+   <!-- Cria area principal do site -->
+    <div class="jumbotron">
+      <div class="container">
+      	<br />
+        <h1>Resumo sobre mim</h1>
+        <p>
+        	Meu nome é João Victor, tenho 21 ano e sou apaixonado por tecnologia <3.
+          Gosto de desafios, de me esforçar de ir atrás e fazer acontecer.
+          Atualmente estou estagiando na Delotech Games <3 e to gostando muito do estágio...
+        </p>
+        
+        <p><a href="sobre.html" class="btn btn-primary btn-lg" role="button">Veja mais &raquo;</a></p>
+      </div>
+    </div>
+
+    <div class="container"><!-- container -->
+      <!-- Criação de colunas -->
+      <div class="row">
+      	
+        <div class="col-md-6">
+
+          <img src="img/RealTime1.png" class="img-thumbnail imagem" alt="Responsive image">
+          <p class="jumbotron">
+
+          
+
+            Aplicativo de monitoramento de tempo desenvolvido em Flutter, consumindo uma API que vem do site <a href="https://hgbrasil.com/">https://hgbrasil.com/</a>.
+          </p>
+          <p><a class="btn btn-default" href="app.html">Veja mais &raquo;</a></p>
+        </div>
+        
+        <div class="col-md-6">
+
+          <img src="img/FacebookClone.png" class="img-thumbnail imagem" alt="Responsive image">
+
+
+          
+          <p class="jumbotron">
+
+            Front-end do facebook desenvolvido no inicio dos meus estudos sobre responsividade. O app se adpta a diferentes tamanhos de tela.
+          </p>
+          <p><a class="btn btn-default" href="app2.html">Veja mais &raquo;</a></p>
+        </div>
+        
+        <div class="col-md-6">
+
+          <img src="img/WppClone1.png" class="img-thumbnail imagem" alt="Responsive image">
+
+          <p class="jumbotron">
+
+              Front-end do WhatsApp desenvolvido no inicio dos meus estudos sobre responsividade. O app se adpta a diferentes tamanhos de tela.
+          </p>
+          <p><a class="btn btn-default" href="app3.html">Veja mais &raquo;</a></p>
+        </div>
+
+        <div class="col-md-6">
+          <img src="img/Jogo.jpeg" class="img-thumbnail" alt="Responsive image" height="750" width="370">
+          <p class="jumbotron">
+            Jogo desenvolvido no inicio da minha aprendizagem sobre jogos utilizando a unity. Desenvolvido nos meus primeiros dias como estágiário em desenvolvimento de jogos
+          </p>
+          <p><a class="btn btn-default" href="app4.html">Veja mais &raquo;</a></p>
+        </div> 
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; PORTIFÓLIO 2021</p>
+      </footer>
+    </div> <!-- /container -->
+
+	</body>
+	
+</html>

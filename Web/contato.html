@@ -1,0 +1,127 @@
+<!DOCTYPE html><!-- doctype do HTML5 -->
+<html>
+	<head>
+		<title>Meu portifólio</title>
+		
+		<!-- Importante para habilitar os recursos de Responsividade em conjunto com o CSS -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+  		        
+  		<link rel="stylesheet" href="css/bootstrap.css">
+
+      <script language="Javascript">
+
+        function validacaoEmail(field) 
+        {
+          usuario = field.value.substring(0, field.value.indexOf("@"));
+          dominio = field.value.substring(field.value.indexOf("@")+ 1, field.value.length);
+            if ((usuario.length >=1) &&
+                (dominio.length >=3) &&
+                (usuario.search("@")==-1) &&
+                (dominio.search("@")==-1) &&
+                (usuario.search(" ")==-1) &&
+                (dominio.search(" ")==-1) &&
+                (dominio.search(".")!=-1) &&
+                (dominio.indexOf(".") >=1)&&
+                (dominio.lastIndexOf(".") < dominio.length - 1)) {
+            document.getElementById("msgemail").innerHTML="E-mail válido";
+            alert("email valido");
+          }
+          else
+          {
+            document.getElementById("msgemail").innerHTML="<font color='red'>Email inválido </font>";
+            alert("E-mail invalido");
+          }
+        }
+      </script>
+      
+	</head>
+	
+<body>
+		
+    
+
+    <!-- Início da barra de navegação -->
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+            
+            <!-- botao utilizado para abrir menu em dispositivos resolucao menor -->
+          	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            	<span class="icon-bar"></span>
+            	<span class="icon-bar"></span>
+            	<span class="icon-bar"></span>
+          	</button>
+            
+            <!-- logo do site -->
+            <a class="navbar-brand" href="#">Contatos</a>
+			
+			<!-- inicio menu -->
+            <div class="navbar-collapse collapse navbar-right">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">HOME</a></li>
+                <li class="active"><a href="contato.html">CONTATO</a></li>
+                <li><a href="sobre.html">SOBRE MIM</a></li>
+              </ul>
+            </div>
+            <!-- fim menu -->
+            
+		</div>
+	</div>
+	<!-- Fim da barra de navegação -->
+	
+   <!-- Cria area principal de marketing de um site -->
+    <div class="jumbotron">
+      <div class="container">
+      	<br />
+        <h1>Contato</h1>
+        <p>
+        	Envie-me um email para conversarmos... 
+        </p>
+      </div>
+    </div>
+
+    <div class="container"><!-- container -->
+      <!-- Criação de colunas -->
+      <div class="row">
+        <div class="col-md-6">
+          <form name="f1">
+            <div class="form-group"> 
+              <table>
+                  <div>
+                    <label for="exampleFormControlTextarea1">Email</label>
+                    <input type="text" name="email" class="form-control" onblur="validacaoEmail(f1.email)" id="email" placeholder="name@example.com" maxlength="60" size='65'>
+                  </div>
+                  <div>
+                    <div id="msgemail"></div>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Assunto</label>
+                    <input class="form-control" id="assunto" name="assunto" rows="4" placeholder="Melhorias/Sugestões"></input>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Mensagem</label>
+                    <input class="form-control" id="mensagem" name="mensagem" rows="3" placeholder="Olá, gostaria de sugerir essa melhoria..."></input>
+                  </div>
+                  <div>
+            <button onclick="location.href='mailto:joaojvwwe@gmail.com'+'?subject='+assunto.value+'&body='+email.value + mensagem.value" class="btn btn-primary" >
+              Enviar
+            </button>
+            
+          </div>
+              </table>
+              </div>
+          </form>
+        </div>  
+      </div>
+
+      <footer>
+        <p>&copy; PORTIFÓLIO 2021</p>
+      </footer>
+    </div> <!-- /container -->
+
+	</body>
+	
+</html>
